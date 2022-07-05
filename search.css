@@ -1,0 +1,49 @@
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 검색창 헤더 부분 */
+.search-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  margin: 4px 20px 0 0;
+}
+
+.back-button img {
+  width: 22px;
+  height: 22px;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0 7px 16px;
+  border-radius: 32px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.search-input:focus {
+  outline: 2px solid #8a51f3;
+}
