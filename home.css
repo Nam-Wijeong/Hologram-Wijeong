@@ -1,22 +1,5 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-* {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
-    'Malgun Gothic', sans-serif;
-  box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
+body {
+  font-family: Pretendard;
 }
 
 /* 헤더 부분 */
@@ -27,13 +10,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 11px 16px 10px 16px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 16px 8.5px 16px;
+  border-bottom: 1px solid var(--light-gray-color);
 }
 
 .home-header .home-title {
   font-size: 17px;
   font-weight: 700;
+}
+
+.home-header .search-icon {
+  background-color: transparent;
 }
 
 .home-header .search-icon img {
@@ -66,15 +53,15 @@ a {
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  color: #767676;
+  color: var(--gray-text-color);
   margin-bottom: 20px;
 }
 
 .main-search-button {
   font-size: 14px;
   font-weight: 500;
-  color: #ffffff;
-  background-color: #8a51f3;
-  padding: 14px 35.47px 14px 35.53px;
+  color: var(--background-color);
+  background-color: var(--enabled-color);
+  padding: 14px 35.47px 13.5px 35.53px;
   border-radius: 30px;
 }

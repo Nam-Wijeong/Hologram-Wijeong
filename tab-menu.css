@@ -1,14 +1,5 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-* {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
-    'Malgun Gothic', sans-serif;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
+body {
+  font-family: Pretendard;
 }
 
 /* 푸터 탭 메뉴 */
@@ -16,13 +7,13 @@ a {
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--light-gray-color);
 }
 
 .home-footer .tab-menu {
   display: flex;
   justify-content: space-between;
-  padding: 18px 34px;
+  padding: 9.5px 34px;
 }
 
 .home-footer .tab-menu a {
@@ -33,7 +24,7 @@ a {
   font-size: 10px;
   font-weight: 400;
   text-align: center;
-  color: #767676;
+  color: var(--gray-text-color);
 }
 
 .home-footer .tab-menu #home-link::before {

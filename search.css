@@ -1,16 +1,5 @@
 * {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
-    'Malgun Gothic', sans-serif;
-  box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  padding: 0;
+  font-family: Pretendard;
 }
 
 /* 검색창 헤더 부분 */
@@ -22,11 +11,13 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--light-gray-color);
 }
 
 .back-button {
   margin: 4px 20px 0 0;
+  background-color: transparent;
+  padding: 0;
 }
 
 .back-button img {
@@ -40,10 +31,9 @@ button {
   font-weight: 400;
   padding: 8px 0 7px 16px;
   border-radius: 32px;
-  border: none;
-  background-color: #f2f2f2;
+  background-color: var(--background-gray-color);
 }
 
 .search-input:focus {
-  outline: 2px solid #8a51f3;
+  outline: 2px solid var(--enabled-color);
 }

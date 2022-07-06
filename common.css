@@ -1,0 +1,44 @@
+/* style */
+:root {
+  --enabled-color: #8a51f3;
+  --disabled-color: #dbcbfa;
+  --error-message-color: #eb5757;
+  --content-color-text: #333333;
+  --gray-text-color: #767676;
+  --light-gray-color: #dbdbdb;
+  --background-color: #fff;
+  --background-gray-color: #f2f2f2;
+}
+
+* {
+  color: #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
