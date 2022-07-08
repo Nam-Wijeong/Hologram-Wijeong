@@ -10,8 +10,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px 8.5px 16px;
+  padding: 10px 16px 9.5px 16px;
   border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--background-color);
 }
 
 .home-header .home-title {
