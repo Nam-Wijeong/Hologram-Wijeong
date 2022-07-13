@@ -9,28 +9,31 @@
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/tab-menu.css" />
     <link rel="stylesheet" href="../css/feed.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
   </head>
   <body>
     <header class="home-header">
       <h1 class="home-title">홀로그램 피드</h1>
-      <button type="button" class="search-icon">
+      <a href="./search-init.html" class="search-icon">
         <img
           src="../assets/images/icon/icon-search.svg"
           alt="검색모양 아이콘 버튼"
         />
-      </button>
+      </a>
     </header>
     <main class="home-main">
       <section class="post-section">
         <h2 class="sr-only">피드 게시물 부분</h2>
-        <ul class="post-list">
+        <ul class="post-list-wrap">
           <!-- 포스트 오늘의 잡담 -->
           <li class="post-list-item">
-            <img
-              src="../assets/images/image-post.png"
-              alt="피드 게시물 이미지"
-              class="post-image"
-            />
+            <div class="post-img-wrap">
+              <img
+                src="../assets/images/행복.jpeg"
+                alt="피드 게시물 이미지"
+                class="post-image"
+              />
+            </div>
             <div class="post-nav">
               <div class="post-user">
                 <img
@@ -67,28 +70,21 @@
               <p class="post-time">20분 전</p>
               <div class="post-footer-button">
                 <button type="button" class="like-button">
-                  <img
-                    src="../assets/images/icon/icon-like-gray.svg"
-                    alt="좋아요 버튼 아이콘"
-                    class="like-button-image"
-                  />
+                  <div class="sr-only">좋아요</div>
                 </button>
-                <span>8</span>
+                <span class="like-num">0</span>
                 <button type="button" class="comment-button">
-                  <img
-                    src="../assets/images/icon/icon-comments.svg"
-                    alt="댓글 버튼 아이콘"
-                    class="comment-button-image"
-                  />
+                  <div class="sr-only">댓글</div>
                 </button>
-                <span>12</span>
+                <span class="comment-num">12</span>
               </div>
             </div>
           </li>
+
           <!-- 포스트 찬반 대결 -->
           <li class="post-list-item">
             <img
-              src="../assets/images/image-post.png"
+              src="../assets/images/img-post-sample.png"
               alt="피드 게시물 이미지"
               class="post-image"
             />
@@ -123,25 +119,17 @@
             </div>
             <div class="post-footer thumbs-buttons">
               <button type="button" class="thumbs-up-button">
-                <img
-                  src="../assets/images/icon/icon-ThumbsUp-gray.svg"
-                  alt="찬성 버튼 아이콘"
-                  class="thumbs-up-image"
-                />
+                <div class="sr-only">찬성</div>
               </button>
               <button type="button" class="thumbs-down-button">
-                <img
-                  src="../assets/images/icon/icon-ThumbsDown-gray.svg"
-                  alt="반대 버튼 아이콘"
-                  class="thumbs-up-image"
-                />
+                <div class="sr-only">반대</div>
               </button>
             </div>
           </li>
           <!-- 포스트 오늘의 팁 -->
-          <li class="post-list-item">
+          <!-- <li class="post-list-item">
             <img
-              src="../assets/images/image-post.png"
+              src="../assets/images/img-post-sample.png"
               alt="피드 게시물 이미지"
               class="post-image"
             />
@@ -184,7 +172,7 @@
                     class="like-button-image"
                   />
                 </button>
-                <span>8</span>
+                <span class="like-num">8</span>
                 <button type="button" class="comment-button">
                   <img
                     src="../assets/images/icon/icon-comments.svg"
@@ -192,14 +180,14 @@
                     class="comment-button-image"
                   />
                 </button>
-                <span>12</span>
+                <span class="comment-num">12</span>
               </div>
             </div>
-          </li>
+          </li> -->
           <!-- 포스트 판매글 -->
-          <li class="post-list-item">
+          <!-- <li class="post-list-item">
             <img
-              src="../assets/images/image-post.png"
+              src="../assets/images/img-post-sample.png"
               alt="피드 게시물 이미지"
               class="post-image"
             />
@@ -241,7 +229,7 @@
                     class="like-button-image"
                   />
                 </button>
-                <span>8</span>
+                <span class="like-num">8</span>
                 <button type="button" class="comment-button">
                   <img
                     src="../assets/images/icon/icon-comments.svg"
@@ -249,28 +237,77 @@
                     class="comment-button-image"
                   />
                 </button>
-                <span>12</span>
+                <span class="comment-num">12</span>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
     <footer class="home-footer">
       <ul class="tab-menu">
         <li>
-          <a href="#none" id="home-link">홈</a>
+          <a href="./home.html" class="home-link">
+            <div class="home-icon"></div>
+            홈
+          </a>
         </li>
         <li>
-          <a href="#none" id="chat-link">채팅</a>
+          <a href="#none" class="chat-link">
+            <div class="chat-icon"></div>
+            채팅
+          </a>
         </li>
         <li>
-          <a href="#none" id="post-link">게시물 작성</a>
+          <a href="#none" class="post-link">
+            <div class="post-icon"></div>
+            게시물 작성
+          </a>
         </li>
         <li>
-          <a href="#none" id="profile-link">프로필</a>
+          <a href="#none" class="profile-link">
+            <div class="profile-icon"></div>
+            프로필
+          </a>
         </li>
       </ul>
     </footer>
+
+    <div class="modal-bg hidden"></div>
+    <article class="modal-window-bottom hidden">
+      <h3 class="sr-only">게시글 모달창</h3>
+      <button type="button" class="modal-close-bar">
+        <img
+          src="../assets/images/icon/icon-modal-closebtn.svg"
+          alt="모달창 닫기 아이콘"
+          class="modal-close-icon"
+        />
+      </button>
+      <ul class="modal-list">
+        <li>
+          <button id="delete-post" class="modal-list-btn">삭제</button>
+        </li>
+        <li>
+          <button id="modify-post" class="modal-list-btn">수정</button>
+        </li>
+      </ul>
+    </article>
+
+    <article class="modal-window-center hidden">
+      <h3 class="sr-only">게시글삭제 확인 모달창</h4>
+      <p class="modal-center-text">게시글을 삭제할까요?</p>
+      <div class="modal-center-btn">
+        <button type="button" id="cancel-btn" class="center-btn-left">
+          취소
+        </button>
+        <button type="button" id="logout-btn" class="center-btn-right">
+          삭제
+        </button>
+      </div>
+    </article>
+
+    <script src="../js/goBack.js"></script>
+    <script src="../js/feed-icon.js"></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>
