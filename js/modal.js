@@ -1,41 +1,36 @@
-// 페이지 하단
-const postMenuBtn = document.querySelector('.post-menu-button');
-const modalBg = document.querySelector('.modal-bg');
-const modalBottom = document.querySelector('.modal-window-bottom');
-const modalClose = document.querySelector('.modal-close-bar');
-const deleteBtn = document.querySelector('#delete-post');
-const modifyBtn = document.querySelector('#modify-post');
-
-// 페이지 중앙
+const modalCloseBar = document.querySelector('.modal-close-bar');
+const modalReport = document.querySelector('#report');
 const modalCenter = document.querySelector('.modal-window-center');
-const cancelBtn = document.querySelector('#cancel-btn');
-const logoutBtn = document.querySelector('#logout-btn');
+const modalCancelBtn = document.querySelector('#cancel-btn');
+const modalReportBtn = document.querySelector('#report-btn');
 
-function showModalBottom() {
-    modalBottom.classList.remove('hidden');
-    modalBg.classList.remove('hidden');
-}
-
-function hiddenModalBottom() {
-  modalBottom.classList.add('hidden');
-  modalBg.classList.add('hidden');
-}
-
-postMenuBtn.addEventListener('click', showModalBottom);
-
-function showModalCenter() {
+// 중앙 모달창 열기
+modalReport.addEventListener('click', () => {
   modalCenter.classList.remove('hidden');
+
+// 중앙 모달창 닫기
+  closeModalCenter();
+})
+
+// 하단 모달창 닫기
+function closeModalBottom () {
+    modalCloseBar.addEventListener('click', () => {
+        modalBg.classList.add('hidden');
+        modalBottom.classList.add('hidden');
+    }) 
+  }
+closeModalBottom(); 
+
+// 중앙 모달창 닫기
+function closeModalCenter () {
+modalCancelBtn.addEventListener('click', () => {
+    modalCenter.classList.add('hidden');
+    modalBg.classList.add('hidden');
+    modalBottom.classList.add('hidden');
+})
+modalReportBtn.addEventListener('click', () => {
+    modalCenter.classList.add('hidden');
+    modalBg.classList.add('hidden');
+    modalBottom.classList.add('hidden');
+})
 }
-
-function hiddenModalCenter() {
-  modalCenter.classList.add('hidden');
-}
-
-deleteBtn.addEventListener('click', showModalCenter);
-cancelBtn.addEventListener('click', () => {
-  hiddenModalCenter();
-  hiddenModalBottom();
-} );
-
-
-

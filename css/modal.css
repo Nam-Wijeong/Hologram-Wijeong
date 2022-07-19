@@ -1,6 +1,6 @@
 /* 페이지 중앙 모달창 기본 틀 */
 .modal-window-center {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -85,7 +85,7 @@
 }
 
 #delete-comment.modal-list-btn,
-#report-comment.modal-list-btn,
+#report.modal-list-btn,
 #chatroom.modal-list-btn {
   margin-bottom: 10px;
 }

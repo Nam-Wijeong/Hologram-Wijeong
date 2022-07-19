@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈피드 게시글 화면 | Hologram</title>
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/feed.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+  </head>
+  <body>
+    <header class="home-header">
+      <h1 class="home-title">홀로그램 피드</h1>
+      <a href="../pages/search-result.html" class="search-icon">
+        <img
+          src="../assets/images/icon/icon-search.svg"
+          alt="검색모양 아이콘 버튼"
+        />
+      </a>
+    </header>
+    <main class="home-main"></main>
+    <footer class="home-footer">
+      <ul class="tab-menu">
+        <li>
+          <a href="./feed.html" class="home-link clicked">
+            <div class="home-icon clicked"></div>
+            홈
+          </a>
+        </li>
+        <li>
+          <a href="../pages/chat.html" class="chat-link">
+            <div class="chat-icon"></div>
+            채팅
+          </a>
+        </li>
+        <li>
+          <a href="../pages/post.html" class="post-link">
+            <div class="post-icon"></div>
+            게시물 작성
+          </a>
+        </li>
+        <li>
+          <a href="../pages/profile.html" class="profile-link">
+            <div class="profile-icon"></div>
+            프로필
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="modal-bg hidden"></div>
+    <article class="modal-window-bottom hidden">
+      <h1 class="sr-only">게시글 신고 모달창</h1>
+      <button type="button" class="modal-close-bar">
+        <img
+          src="../assets/images/icon/icon-modal-closebtn.svg"
+          alt="모달창 닫기 아이콘"
+          class="modal-close-icon"
+        />
+      </button>
+      <ul class="modal-list">
+        <li>
+          <button id="report" class="modal-list-btn">신고하기</button>
+        </li>
+      </ul>
+    </article>
+
+    <article class="modal-window-center hidden">
+      <h1 class="sr-only">게시글 신고 확인 모달창</h1>
+      <p class="modal-center-text">게시글을 신고하시겠어요?</p>
+      <div class="modal-center-btn">
+        <button type="button" id="cancel-btn" class="center-btn-left">
+          취소
+        </button>
+        <button type="button" id="report-btn" class="center-btn-right">
+          신고
+        </button>
+      </div>
+    </article>
+    <script src="../js/feedTest.js"></script>
+    <script src="../js/feedmodal.js"></script>
+  </body>
+</html>
